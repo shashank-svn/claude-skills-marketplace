@@ -1,22 +1,11 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { mockApi } from "../../services/mockApi";
+import { mockApi, CATEGORIES } from "../../services/mockApi";
 import { useAuth } from "../../contexts/AuthContext";
 import { useToast } from "../../components/Toast";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { PlusCircle, X } from "lucide-react";
-
-const CATEGORIES = [
-  "Writing",
-  "Coding",
-  "Data",
-  "Marketing",
-  "Productivity",
-  "Design",
-  "Business",
-  "Education",
-];
 
 const defaultForm = {
   title: "",

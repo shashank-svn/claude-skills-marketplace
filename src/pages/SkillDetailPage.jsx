@@ -1,31 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { mockApi } from "../services/mockApi";
+import { mockApi, isDiscountActive } from "../services/mockApi";
 import { useAuth } from "../contexts/AuthContext";
 import { useCart } from "../contexts/CartContext";
 import { useToast } from "../components/Toast";
 import { SkillCard } from "../components/SkillCard";
 import { Button } from "../components/Button";
 import { Star, Tag, CheckCircle, Store } from "lucide-react";
-
-// Helper to check if a discount is currently active
-const isDiscountActive = (discount) => {
-  if (!discount || !discount.active) return false;
-
-  const now = new Date();
-
-  // Check start date if provided
-  if (discount.startDate && new Date(discount.startDate) > now) {
-    return false;
-  }
-
-  // Check end date if provided
-  if (discount.endDate && new Date(discount.endDate) < now) {
-    return false;
-  }
-
-  return true;
-};
 
 function ContentModal({ content, onClose }) {
   return (

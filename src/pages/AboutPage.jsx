@@ -113,9 +113,9 @@ export default function AboutPage() {
             <Link to="/skills">
               <Button variant="primary">Browse Skills</Button>
             </Link>
-            <Link to="/dashboard">
+            {/* <Link to="/dashboard">
               <Button variant="secondary">Become a Seller</Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

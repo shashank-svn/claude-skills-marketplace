@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 // Helper to check if a discount is currently active
-const isDiscountActive = (discount) => {
+export const isDiscountActive = (discount) => {
   if (!discount || !discount.active) return false;
 
   const now = new Date();
@@ -21,7 +21,7 @@ const isDiscountActive = (discount) => {
   return true;
 };
 
-const CATEGORIES = [
+export const CATEGORIES = [
   "Writing",
   "Coding",
   "Data",

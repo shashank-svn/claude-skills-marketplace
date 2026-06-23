@@ -1,20 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { mockApi } from "../services/mockApi";
+import { mockApi, CATEGORIES } from "../services/mockApi";
 import { SkillCard } from "../components/SkillCard";
 import { Button } from "../components/Button";
 import { ArrowRight, ShoppingBag, Zap, Star } from "lucide-react";
-
-const CATEGORIES = [
-  "Writing",
-  "Coding",
-  "Data",
-  "Marketing",
-  "Productivity",
-  "Design",
-  "Business",
-  "Education",
-];
 
 const CATEGORY_COLORS = {
   Writing: "bg-purple-100 text-purple-700",

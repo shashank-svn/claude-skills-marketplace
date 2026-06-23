@@ -1,24 +1,6 @@
 import { Link } from "react-router-dom";
 import { Star } from "lucide-react";
-
-// Helper to check if a discount is currently active
-const isDiscountActive = (discount) => {
-  if (!discount || !discount.active) return false;
-
-  const now = new Date();
-
-  // Check start date if provided
-  if (discount.startDate && new Date(discount.startDate) > now) {
-    return false;
-  }
-
-  // Check end date if provided
-  if (discount.endDate && new Date(discount.endDate) < now) {
-    return false;
-  }
-
-  return true;
-};
+import { isDiscountActive } from "../services/mockApi";
 
 export const SkillCard = ({ skill }) => {
   const isDiscounted = isDiscountActive(skill.discount);

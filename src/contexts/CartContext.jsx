@@ -1,24 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import { mockApi } from "../services/mockApi";
-
-// Helper to check if a discount is currently active
-const isDiscountActive = (discount) => {
-  if (!discount || !discount.active) return false;
-
-  const now = new Date();
-
-  // Check start date if provided
-  if (discount.startDate && new Date(discount.startDate) > now) {
-    return false;
-  }
-
-  // Check end date if provided
-  if (discount.endDate && new Date(discount.endDate) < now) {
-    return false;
-  }
-
-  return true;
-};
+import { mockApi, isDiscountActive } from "../services/mockApi";
 
 const CartContext = createContext();
 

@@ -1,19 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { mockApi } from "../services/mockApi";
+import { mockApi, CATEGORIES } from "../services/mockApi";
 import { SkillCard } from "../components/SkillCard";
 import { SlidersHorizontal } from "lucide-react";
-
-const CATEGORIES = [
-  "Writing",
-  "Coding",
-  "Data",
-  "Marketing",
-  "Productivity",
-  "Design",
-  "Business",
-  "Education",
-];
 const SORT_OPTIONS = [
   { value: "newest", label: "Newest First" },
   { value: "priceAsc", label: "Price: Low → High" },
