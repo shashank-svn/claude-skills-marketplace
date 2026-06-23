@@ -9,7 +9,7 @@ To run this project locally, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Sowjanyashekar28/claude-skills-marketplace.git
+   git clone https://github.com/shashank-svn/claude-skills-marketplace.git
    cd claude-skills-marketplace
    ```
 
